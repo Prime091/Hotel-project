@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Royal Haven Hotel & Resort: premium accommodation and exceptional service in the heart of Nigeria.">
+    <title>Royal Haven Hotel & Resort</title>
+    <!-- Awesome fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Fonts: google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Date picker styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Our styles -->
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="queries.css">
+</head>
+<body>
+
+   
+     <!------------------------------------------- 1. HERO (navigation + headline, one big background image) ------------------------------------------->
+<header class="site-header">
+    <div class="container site-header__bar site-header--scrolled">
+
+        <a href="#home" class="logo">
+            <img src="images/logo/logo.png" alt="site-logo" width="45" class="logo__img">
+            <span class="logo__text">
+                <span class="logo__name">ROYAL HAVEN</span>
+                <span class="logo__tagline">HOTEL &amp; RESORT</span>
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link nav__link--active">Home</a></li>
+                <li class="nav__item"><a href="#rooms" class="nav__link">Rooms &amp; Suites</a></li>
+                <li class="nav__item"><a href="#facilities" class="nav__link">Facilities</a></li>
+                <li class="nav__item"><a href="#dining" class="nav__link">Dining</a></li>
+                <li class="nav__item"><a href="#events" class="nav__link">Events</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="#booking" class="btn btn--primary hero__book-btn">Book Now</a>
+
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+    </div>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="container hero__content">
+        <h1 class="hero__title">
+            Experience <br>
+            <span class="hero__title-accent">Luxury &amp; Comfort</span> <br>
+            in the Heart of Nigeria
+        </h1>
+        <p class="hero__text">Premium accommodation. Exceptional service. Unforgettable memories.</p>
+
+        <div class="hero__actions">
+            <a href="#booking" class="btn btn--primary">Book Your Stay &rarr;</a>
+            <a href="#rooms" class="btn btn--outline">Explore Rooms</a>
+        </div>
+    </div>
+
+    <button type="button" class="hero__video-btn">
+        <span class="hero__video-icon" aria-hidden="true">&#9654;</span>
+        <span class="hero__video-text">Watch Video</span>
+    </button>
+
+</section>
+
+
+    <main>
+
+        
+     <!--------------------------------------------- 2. BOOKING BAR (overlaps the bottom of the hero) --------------------------------------------->
+        
+        <section class="booking" id="booking" aria-label="Check availability">
+            <div class="container">
+                <form class="booking__form" action="#" method="get">
+
+                    <div class="booking__field">
+                        <label for="checkIn" class="booking__label">Check-in</label>
+                        <div class="booking__input-wrap">
+                            <input type="text" id="checkIn" name="check-in" class="booking__input" placeholder="Select date">
+                            <i class="fa-regular fa-calendar-days booking__icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="booking__field">
+                            <label for="checkOut" class="booking__label">Check-out</label>
+                            <div class="booking__input-wrap">
+                                <input type="text" id="checkOut" name="check-out" class="booking__input" placeholder="Select date">
+                                <i class="fa-regular fa-calendar-days booking__icon" aria-hidden="true"></i>
+                            </div>
+                     </div>
+
+                    <div class="booking__field">
+                        <label for="guests" class="booking__label">Guests</label>
+                        <select id="guests" name="guests" class="booking__input">
+                            <option value="1">1 Adult, 0 children</option>
+                            <option value="2" selected>2 Adults, 0 children</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary booking__submit">Check Availability</button>
+
+                </form>
+            </div>
+        </section>
+
+
+        
+             <!--------------------------------------------- 3. ROOMS & SUITES --------------------------------------------->
+             
+        <section class="section rooms" id="rooms">
+            <div class="container">
+
+                <div class="section__header">
+                    <div>
+                        <p class="section__label">Rooms &amp; Suites</p>
+                        <h2 class="section__title">Find Your Perfect Stay</h2>
+                    </div>
+                    <a href="#rooms" class="link-arrow">View all rooms &rarr;</a>
+                </div>
+
+                <div class="rooms__grid">
+
+                    <!-- Room card 1 -->
+                    <article class="room-card">
+                        <img src="images/rooms/duluex_view.avif" alt="Deluxe room with a large bed and city view" class="room-card__img" width="400" height="260">
+                        <div class="room-card__body">
+                            <h3 class="room-card__name">Deluxe Room</h3>
+                            <p class="room-card__view">City View</p>
+
+                            <ul class="room-card__features">
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/guest.svg" alt="guest-image"> 2 Guests
+                                </li>
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/bed.svg" alt="Bed-image"> 1 Bed
+                                </li>
+                                <li class="room-card__feature">
+                                   <img class="room-card__feature-image" src="images/icons/square-meter-icon.jpg" alt="square">24m<sup>2</sup>
+                                </li>
+                            </ul>
+
+                            <div class="room-card__footer">
+                                <p class="room-card__price">&#8358;120,000 <span class="room-card__per-night">/ night</span></p>
+                                <a href="#" class="btn btn--primary room-btn btn--small">View Room</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Room card 2 -->
+                    <article class="room-card">
+                        <img src="images/rooms/premium.jpg" alt="Premium room with a pool view" class="room-card__img" width="400" height="260">
+                        <div class="room-card__body">
+                            <h3 class="room-card__name">Premium Room</h3>
+                            <p class="room-card__view">Pool View</p>
+
+                            <ul class="room-card__features">
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/guest.svg" alt="guest-image">2 Guests
+                                </li>
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/bed.svg" alt="Bed-image"> 1 Bed
+                                </li>
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/square-meter-icon.jpg" alt="square">28m<sup>2</sup>
+                                </li>
+                            </ul>
+
+                            <div class="room-card__footer">
+                                <p class="room-card__price">&#8358;180,000 <span class="room-card__per-night">/ night</span></p>
+                                <a href="#" class="btn btn--primary room-btn btn--small">View Room</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Room card 3 -->
+                    <article class="room-card">
+                        <img src="images/rooms/Executive.webp" alt="Executive suite with a sitting area and city view" class="room-card__img" width="400" height="260">
+                        <div class="room-card__body">
+                            <h3 class="room-card__name">Executive Suite</h3>
+                            <p class="room-card__view">City View</p>
+
+                            <ul class="room-card__features">
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/guest.svg" alt="guest-image"> 4 Guests
+                                </li>
+                                <li class="room-card__feature">
+                                    <img class="room-card__feature-image" src="images/icons/bed.svg" alt="Bed-image"> 2 Beds
+                                </li>
+                                <li class="room-card__feature">
+                                   <img class="room-card__feature-image" src="images/icons/square-meter-icon.jpg" alt="square">45m<sup>2</sup>
+                                </li>
+                            </ul>
+
+                            <div class="room-card__footer">
+                                <p class="room-card__price">&#8358;250,000 <span class="room-card__per-night">/ night</span></p>
+                                <a href="#" class="btn btn--primary room-btn btn--small">View Room</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+       
+        <!--------------------------------------------- 4. AMENITIES (dark navy band) --------------------------------------------->
+             
+        <section class="amenities" id="facilities">
+            <div class="container amenities__inner">
+
+                <div class="amenities__intro">
+                    <p class="section__label">Amenities</p>
+                    <h2 class="amenities__title">World Class Amenities</h2>
+                    <a href="#facilities" class="btn btn--outline amenities-btn btn--small">View All Amenities</a>
+                </div>
+
+                    <ul class="amenities__list">
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-person-swimming amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Swimming Pool</span>
+                        </li>
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-utensils amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Restaurant &amp; Bar</span>
+                        </li>
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-dumbbell amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Fitness Center</span>
+                        </li>
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-wifi amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Free Wi-Fi</span>
+                        </li>
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-spa amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Spa &amp; Wellness</span>
+                        </li>
+                        <li class="amenities__item">
+                            <i class="fa-solid fa-square-parking amenities__icon" aria-hidden="true"></i>
+                            <span class="amenities__name">Free Parking</span>
+                        </li>
+                    </ul>
+            </div>
+        </section>
+
+
+            <!--------------------------------------------- 5. WHY CHOOSE US (image left, text right) --------------------------------------------->
+             
+        <section class="why" id="about">
+
+            <div class="why__image-wrap">
+                <img src="images/ambience/hotel_side_pool_view.avif" alt="Hotel swimming pool at sunset" class="why__image">
+            </div>
+
+            <div class="why__content">
+               <div class="why__text-container">
+                    <p class="section__label">Why Choose Us</p>
+                    <h2 class="section__title">Your Comfort Is Our Priority</h2>
+               </div>
+
+                <ul class="why__list">
+                    <li class="why__item">
+                        <i class="fa-solid fa-location-dot why__icon" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="why__item-title">Prime Location</h3>
+                            <p class="why__item-text">Located in the heart of the city with easy access.</p>
+                        </div>
+                    </li>
+                    <li class="why__item">
+                        <i class="fa-solid fa-couch why__icon" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="why__item-title">Luxury &amp; Comfort</h3>
+                            <p class="why__item-text">Elegant rooms designed for your relaxation.</p>
+                        </div>
+                    </li>
+                    <li class="why__item">
+                        <i class="fa-solid fa-headset why__icon" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="why__item-title">24/7 Support</h3>
+                            <p class="why__item-text">Our team is always here to help you.</p>
+                        </div>
+                    </li>
+                    <li class="why__item">
+                        <i class="fa-solid fa-shield-halved why__icon" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="why__item-title">Secure &amp; Private</h3>
+                            <p class="why__item-text">Your safety and privacy are guaranteed.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#about" class="btn btn--primary">Learn More About Us</a>
+            </div>
+
+        </section>
+
+
+        
+            <!--------------------------------------------- 6. GALLERY --------------------------------------------->
+             
+        <section class="section gallery" id="gallery">
+            <div class="container">
+
+                <div class="section__header">
+                    <div>
+                        <p class="section__label">Gallery</p>
+                        <h2 class="section__title">A Glimpse of Luxury</h2>
+                    </div>
+                    <a href="#gallery" class="link-arrow">View full gallery &rarr;</a>
+                </div>
+
+                <ul class="gallery__grid">
+                    <li class="gallery__item"><img src="images/gallery/hotel-living-room.jpg" alt="Hotel living room" class="gallery__img"></li>
+                    <li class="gallery__item"><img src="images/gallery/palmeral-villa.jpg" alt="Hotel pool with palm trees" class="gallery__img"></li>
+                    <li class="gallery__item"><img src="images/gallery/hotel-resturant.webp" alt="Hotel restaurant" class="gallery__img"></li>
+                    <li class="gallery__item"><img src="images/gallery/hotel-spa-room.webp" alt="Hotel spa room" class="gallery__img"></li>
+                    <li class="gallery__item"><img src="images/gallery/exterior.jpg" alt="Hotel exterior at night" class="gallery__img"></li>
+                    <li class="gallery__item"><img src="images/gallery/hotel-lobby.jpg" alt="Hotel lobby" class="gallery__img"></li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        
+            <!--------------------------------------------- 7. TESTIMONIALS --------------------------------------------->
+           
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+
+                <div class="section__header">
+                    <div>
+                        <p class="section__label">Testimonials</p>
+                        <h2 class="section__title">What Our Guests Say</h2>
+                    </div>
+                    <div class="testimonials__controls">
+                        <button type="button" class="testimonials__arrow" aria-label="Previous testimonial">&lsaquo;</button>
+                        <button type="button" class="testimonials__arrow" aria-label="Next testimonial">&rsaquo;</button>
+                    </div>
+                </div>
+
+                <div class="testimonials__grid">
+
+                    <figure class="testimonial">
+                        <figcaption class="testimonial__author">
+                            <img src="images/guest/chinedu.jpg" alt=""  class="testimonial__avatar">
+                            <div>
+                                <p class="testimonial__name">Chinedu Okafor</p>
+                                <p class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            </div>
+                        </figcaption>
+                        <blockquote class="testimonial__quote">
+                            &ldquo;The best hotel experience I've had in Nigeria. The service, comfort, and attention to detail were outstanding!&rdquo;
+                        </blockquote>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <figcaption class="testimonial__author">
+                            <img src="images/guest/chieneye.avif" alt=""  class="testimonial__avatar">
+                            <div>
+                                <p class="testimonial__name">Chinenye Nwafor</p>
+                                <p class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            </div>
+                        </figcaption>
+                        <blockquote class="testimonial__quote">
+                            &ldquo;Everything was perfect! The staff were friendly, the room was spotless, and the food was amazing.&rdquo;
+                        </blockquote>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <figcaption class="testimonial__author">
+                            <img src="images/guest/emeka.webp" alt="" class="testimonial__avatar">
+                            <div>
+                                <p class="testimonial__name">Emeka Nwosu</p>
+                                <p class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            </div>
+                        </figcaption>
+                        <blockquote class="testimonial__quote">
+                            &ldquo;Ideal place for relaxation and business trips. I highly recommend Royal Haven Hotel.&rdquo;
+                        </blockquote>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+
+        
+            <!--------------------------------------------- 8. CALL TO ACTION --------------------------------------------->
+            
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta__box">
+                    <i class="fa-solid fa-bell-concierge cta__icon" aria-hidden="true"></i>
+                    <div class="cta__text">
+                        <h2 class="cta__title" id="cta-title">Ready to Experience Luxury?</h2>
+                        <p class="cta__subtitle">Book your stay today and enjoy an unforgettable experience.</p>
+                    </div>
+                    <a href="#booking" class="btn btn--primary">Book Your Stay Now &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+   
+        <!--------------------------------------------- 9. FOOTER --------------------------------------------->
+        
+    <footer class="footer" id="contact">
+        <div class="container">
+
+            <div class="footer__grid">
+
+                <!-- Column 1: brand -->
+                <div class="footer__col footer__brand">
+                    <a href="#home" class="logo">
+                        <img src="images/logo.png" alt="" width="45" class="logo__img">
+                        <span class="logo__text">
+                            <span class="logo__name">ROYAL HAVEN</span>
+                            <span class="logo__tagline">HOTEL &amp; RESORT</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Experience unmatched luxury, exceptional service and true Nigerian hospitality.</p>
+
+                  <ul class="footer__social">
+                        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: quick links -->
+                <nav class="footer__col" aria-label="Quick links">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms &amp; Suites</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Column 3: guest services -->
+                <nav class="footer__col" aria-label="Guest services">
+                    <h3 class="footer__heading">Guest Services</h3>
+                    <ul class="footer__list">
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Column 4: contact -->
+                <div class="footer__col">
+                    <h3 class="footer__heading">Contact Us</h3>
+                 <ul class="footer__list footer__contact">
+                        <li>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+2348001234567">+234 800 123 4567</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:info@royalhavenhotel.com">info@royalhavenhotel.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <address>123 Luxury Avenue, Victoria Island, Lagos, Nigeria</address>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: newsletter -->
+                <div class="footer__col">
+                    <h3 class="footer__heading">Newsletter</h3>
+                    <p class="footer__newsletter-text">Subscribe to our newsletter for updates &amp; offers.</p>
+                    <form class="newsletter" action="#" method="post">
+                        <label for="newsletterEmail" class="visually-hidden">Email address</label>
+                        <input type="email" id="newsletterEmail" name="newsletter-email" class="newsletter__input" placeholder="Enter your email" required>
+                        <button type="submit" class="newsletter__btn" aria-label="Subscribe">&rarr;</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <p class="footer__copyright">&copy; 2026 Royal Haven Hotel &amp; Resort. All Rights Reserved.</p>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="app.js"></script>
+</body>
+</html>

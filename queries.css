@@ -1,0 +1,336 @@
+@import url(app.css);
+
+/* LG-- SMALL LAPTOP: 1024px - 1280px */
+
+@media (max-width: 72rem ) {
+/* 1150px / 16px =72rem */
+/* 72rem x 16px =1152px */
+
+html {
+    font-size: 56.25%;
+    /* 9x / 16px = 56.25% */
+}
+
+
+    .nav__list {
+        gap: var(--space-4);
+    }
+
+    .btn {
+        white-space: nowrap;
+    }
+
+    .room-card__body {
+        flex-grow: 0;
+        padding: var(--space-3);
+    }
+
+
+    .amenities__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-8);
+    }
+
+    .amenities__list {
+        width: 100%;
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* MD-TABLETS: 768px - 1024px  */
+
+@media (max-width: 51rem) {
+    /* 815px / 16px =51rem */
+    /* 51rem x 16px =816px */
+
+html {
+        font-size: 50%;
+        /* 8px / 16px = 50% */
+}
+
+    .site-header__bar {
+        position: relative;
+    }
+
+    .hero__book-btn {
+        margin-left: auto;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: var(--container-padding);
+        right: var(--container-padding);
+        z-index: var(--z-nav);
+        padding: var(--space-5);
+        background-color: var(--color-primary-light);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav--open {
+        display: block;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+   .cta__box {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6);
+    }
+
+}
+
+
+/* SM - PHONE LANDSCAPE: 576px - 768px  */
+
+@media (max-width: 43rem) {
+    /* 680px / 16px =43rem */
+    /* 43rem x 16px = 688px*/
+
+    html {
+        font-size: 43.75%;
+        /* 7px / 16px =43.75% */
+    }
+
+        /* --- Hero and mobile nav --- */
+    .hero__nav {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: var(--container-padding);
+        right: var(--container-padding);
+        z-index: var(--z-nav);
+        padding: var(--space-5);
+        background-color: var(--color-primary-light);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav--open {
+        display: block;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .hero {
+        min-height: auto;
+        padding-bottom: var(--space-16);
+    }
+
+    .hero__content {
+        padding-top: var(--space-12);
+    }
+
+    .hero__video-btn {
+        display: none;
+    }
+
+    /* --- Booking bar --- */
+    .booking {
+        margin-top: -4rem;
+    }
+
+    .booking__form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .booking__field {
+        flex: none;
+        padding: 0;
+    }
+
+    .booking__field + .booking__field {
+        padding-top: var(--space-4);
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* --- Rooms --- */
+    .rooms__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Amenities --- */
+        .amenities__inner {
+        align-items: center;
+        gap: var(--space-8);
+    }
+
+    .amenities__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .amenities__title {
+        max-width: none;
+    }
+
+    .amenities__list {
+        width: 100%;
+    }
+
+    .amenities__title {
+        white-space: nowrap;
+    }
+    .amenities__list {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: var(--space-8);
+    }
+
+    .amenities__item + .amenities__item {
+        border-left: none;
+    }
+
+    /* --- Why choose us --- */
+    .why {
+        grid-template-columns: 1fr;
+    }
+
+    .why__image-wrap {
+        min-height: 28rem;
+    }
+
+    .why__content {
+        padding: var(--space-12) var(--container-padding);
+    }
+
+    /* --- Testimonials --- */
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- CTA --- */
+    .cta__box {
+        flex-direction: column;
+        text-align: center;
+         padding: var(--space-3) 5rem;
+    }
+
+    /* --- Footer --- */
+    .footer {
+        padding: calc(var(--space-6) + 6rem) 0 var(--space-3);
+        font-size: var(--fs-xs);
+    }
+
+    .footer__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-5);
+        padding-bottom: var(--space-5);
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: var(--space-5);
+    }
+
+    .footer__about {
+        max-width: none;
+        margin: 0;
+    }
+
+    .footer__heading {
+        margin-bottom: var(--space-3);
+    }
+
+    .footer__list {
+        gap: var(--space-2);
+    }
+
+    .footer__contact a {
+        overflow-wrap: anywhere;
+    }
+
+    .footer__copyright {
+        padding-top: var(--space-3);
+    }
+
+
+}
+
+
+/* XS - PHONE PORTRIAT: < 576px */
+
+@media (max-width: 34rem) {
+    /* 530px / 16px = 34rem */
+    /* 34rem x 16px = 544px */
+
+html {
+    font-size: 37.5%;
+    /* 6px / 16px = 37.5% */
+}
+
+    .hero__book-btn {
+        display: none;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .section__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+
+    .gallery__img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    }
+
+    .why__list {
+        grid-template-columns: 1fr;
+    }
+
+
+}
